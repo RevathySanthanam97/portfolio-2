@@ -1,0 +1,54 @@
+:root {
+  --color-high: #25282B;
+  --color-md: #828282;
+  --color-low: #9A9FA8;
+  --color-line: #25282B;
+  --color-yellow: #FDC435;
+  --color-gray: #F9FAFF;
+  --color-white: #FFFFFF;
+
+  --font-1: 'Roboto';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ /* Global Styles  */
+ .primary, .secondary {
+  font-family: var(--font-1);
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-high);
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 8px 24px;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--font-1);
+}
+
+img {
+  max-width: 100%;
+}
+
+.primary {
+  border-color: var(--color-high);
+}
+
+.secondary {
+  border-color: var(--color-yellow);
+  background-color: var(--color-yellow);
+}
+
+.color {
+  color: var(--color-yellow);
+}
+
+.nunito {
+  font-family: 'Nunito';
+}

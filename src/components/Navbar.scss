@@ -1,0 +1,51 @@
+.header-right {
+  --nav-color: var(--color-high);
+  --nav-hover: var(--color-yellow);
+
+  &[data-home="true"] {
+    --nav-hover: var(--color-white);
+  }
+
+  nav {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+    li {
+      list-style-type: none;
+  
+      a {
+        font-size: 18px;
+        font-family: 'Roboto';
+        position: relative;
+        color: var(--nav-color);
+  
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          line-height: 23px;
+          overflow: hidden;
+          max-width: 0;
+          color: var(--nav-hover);
+          content: attr(data-hover);
+          -webkit-transition: max-width 0.5s;
+          -moz-transition: max-width 0.5s;
+          transition: max-width 0.5s;
+        }
+        &:hover {
+          &::before {
+            max-width: 100%; 
+          }
+        }
+      }
+    }
+  }
+  
+  .bg {
+    position: absolute;
+    right: 0;
+    top: -10px;
+  }
+}
