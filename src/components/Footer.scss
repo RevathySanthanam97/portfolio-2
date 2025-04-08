@@ -1,0 +1,42 @@
+footer {
+	min-height: 350px;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+    background: url("../assets/footer.svg");
+    position: absolute;
+    bottom: 0;
+    width: 400%;
+    height: 344px;
+		background-repeat: no-repeat;
+	background-size: 1700px 450px;
+    transform: translate3d(0, 0, 0);
+	}
+
+	.container-content {
+		z-index: 5;
+		position: relative;
+	}
+
+	.social-media {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 24px;
+		margin: 40px 0px;
+
+		img {
+			width: 36px;
+			height: 36px;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		text-align: center;
+		color: var(--color-md);
+	}
+}

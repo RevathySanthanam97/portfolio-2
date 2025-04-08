@@ -1,51 +1,74 @@
 .header-right {
-  --nav-color: var(--color-high);
-  --nav-hover: var(--color-yellow);
-
-  &[data-home="true"] {
-    --nav-hover: var(--color-white);
-  }
+  font-size: 0;
 
   nav {
+    --nav-color: var(--color-high);
+    --nav-hover: var(--color-yellow);
+
+    &[data-home="true"] {
+      --nav-hover: var(--color-white);
+    }
+
     display: flex;
-    gap: 30px;
-    justify-content: flex-end;
+    gap: 48px;
+    justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 10;
+
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color-yellow);
+    overflow: hidden;
+
+    transition: 0.3s ease;
+
+    @media screen and (min-width: 992px) {
+      position: relative;
+      height: auto;
+      background-color: transparent;
+      flex-direction: row;
+    }
+
     li {
       list-style-type: none;
-  
+
       a {
         font-size: 18px;
         font-family: 'Roboto';
         position: relative;
         color: var(--nav-color);
-  
-        &::before {
-          position: absolute;
-          top: 0;
-          left: 0;
-          line-height: 23px;
-          overflow: hidden;
-          max-width: 0;
-          color: var(--nav-hover);
-          content: attr(data-hover);
-          -webkit-transition: max-width 0.5s;
-          -moz-transition: max-width 0.5s;
-          transition: max-width 0.5s;
-        }
-        &:hover {
-          &::before {
-            max-width: 100%; 
-          }
-        }
       }
     }
   }
-  
-  .bg {
-    position: absolute;
-    right: 0;
-    top: -10px;
+
+  .mob-nav {
+    text-align: right;
+    position: relative;
+    z-index: 11;
+
+    img {
+      width: 28px;
+      transform: rotate(-45deg);
+      transition: 0.3s ease;
+    }
+
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+
+
+  &[data-menu="true"] {
+    nav {
+      height: 100vh;
+    }
+    .mob-nav img {
+      transform: rotate(0deg);
+    }
   }
 }
+

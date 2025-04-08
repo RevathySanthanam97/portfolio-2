@@ -1,20 +1,31 @@
 .intro {
-  display: flex;
+  @media screen and (min-width: 992px) {
+    display: flex;
+    .left, .right {
+      width: 50%;
+    }
+  }
+
   .left {
-    width: 50%;
     .left-content {
       small {
         margin-bottom: 5px;
       }
 
       h1 {
-        font-size: 64px;
+        font-size: 32px;
+        @media screen and (min-width: 992px) {
+          font-size: 64px;
+        }
       }
 
       >p {
         margin: 15px 0;
-        font-size: 24px;
         color: var(--color-md);
+        font-size: 18px;
+        @media screen and (min-width: 992px) {
+          font-size: 24px;
+        }
       }
 
       .btn-list {
@@ -25,7 +36,6 @@
   }
   .right {
     flex: 1;
-    width: 50%;
     img {
       margin-left: auto;
       margin-top: -86px;

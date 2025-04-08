@@ -1,19 +1,22 @@
 .logo {
-  width: 70px;
+  width: 45px;
+  flex-shrink: 0;
+  z-index: 11;
+
   img {
     max-width: 100%;
-    animation: float 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 15px #fff);
-    transition: filter 0.3s ease;
 
     @keyframes float {
       0% { transform: translateY(0px); }
       50% { transform: translateY(-20px); }
       100% { transform: translateY(0px); }
     }
+  }
 
-    &:hover {
-      filter: drop-shadow(0 0 25px #a6e1fa);
+  @media screen and (min-width: 992px) {
+    width: 70px;
+    img {
+      animation: float 4s ease-in-out infinite;
     }
   }
 }

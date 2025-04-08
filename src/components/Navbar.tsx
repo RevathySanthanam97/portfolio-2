@@ -1,29 +1,34 @@
 import {
   Link,
-  useLocation,
 } from "react-router-dom";
 import "./Navbar.scss";
-import BG from "../assets/yellow-bg.svg";
+import Burger from "../assets/rocket.svg";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
-  const { pathname } = useLocation();
-  const isHome = pathname === "/";
+const Navbar = ({ isHome = false } : { isHome: boolean }) => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [open]);
 
   return (
-    <div className="header-right" data-home={isHome ? true : false}>
-      {isHome && (
-        <div className="bg">
-          <img src={BG} />
-        </div>
-      )}
+    <div data-menu={open} className="header-right" data-home={isHome}>
+      <button onClick={() => setOpen(!open)} className="mob-nav">
+        <img src={Burger} />
+      </button>
       <nav>
-        <li><Link data-hover="Home" to="/">Home</Link></li>
-        <li><Link data-hover="About" to="/about">About</Link></li>
-        <li><Link data-hover="Projects" to="/projects">Projects</Link></li>
-        <li><Link data-hover="Contacts" to="/contacts">Contacts</Link></li>
+        <li><Link onClick={() => setOpen(false)} data-hover="Home" to="/">Home</Link></li>
+        <li><Link onClick={() => setOpen(false)} data-hover="About" to="/about">About</Link></li>
+        <li><Link onClick={() => setOpen(false)} data-hover="Projects" to="/projects">Projects</Link></li>
+        <li><Link onClick={() => setOpen(false)} data-hover="Contacts" to="/contacts">Contacts</Link></li>
       </nav>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;

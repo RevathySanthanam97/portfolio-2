@@ -1,24 +1,20 @@
-import './App.css'
+import './App.scss'
 import {
   Route,
   Routes,
 } from "react-router-dom";
-import Navbar from './components/Navbar';
 import About from './Pages/About';
 import Projects from './Pages/Projects';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
-import Logo from './components/Logo';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
-
   return (
     <>
-      <header>
-        <Logo />
-        <Navbar />
-      </header>
-      <main>
+      <Header />
+      <main className='container'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -26,6 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+      <Footer />
     </>
   )
 }
