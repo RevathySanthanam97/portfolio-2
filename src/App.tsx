@@ -14,11 +14,14 @@ function App() {
   return (
     <>
       <Header />
-      <main className='container'>
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects">
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/omnishop" element={<>Hey</>} />
+          </Route>
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

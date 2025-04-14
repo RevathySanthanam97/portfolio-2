@@ -1,0 +1,27 @@
+.about-page {
+  display: flex;
+
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+    h1 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 24px;
+      line-height: 150%;
+      color: var(--color-md);
+    }
+  }
+
+  .about-right {
+    flex-shrink: 0;
+    width: 524px;
+    height: 524px;
+    align-self: flex-start;
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+  }
+}

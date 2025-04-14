@@ -1,7 +1,10 @@
+import ProjectComponent from "../components/Project"
+
+
 const Projects = () => {
   return (
-    <div>
-      <h1>Projects</h1>
+    <div className="projects">
+      <ProjectComponent />
     </div>
   )
 }

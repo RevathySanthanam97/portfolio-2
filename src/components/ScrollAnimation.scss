@@ -1,0 +1,48 @@
+/* Base animation container */
+.scroll-anim {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+  will-change: opacity, transform;
+}
+
+/* When visible, apply final state */
+.scroll-anim.visible {
+  opacity: 1;
+}
+
+/* Fade (default) */
+.scroll-anim.fade {
+  transform: none;
+}
+
+.scroll-anim.fade.visible {
+  transform: none;
+}
+
+/* Slide Up */
+.scroll-anim.slide-up {
+  transform: translateY(20px);
+}
+
+.scroll-anim.slide-up.visible {
+  transform: translateY(0);
+}
+
+/* Slide Left */
+.scroll-anim.slide-left {
+  transform: translateX(20px);
+}
+
+.scroll-anim.slide-left.visible {
+  transform: translateX(0);
+}
+
+/* Zoom */
+.scroll-anim.zoom {
+  transform: scale(1.05);
+}
+
+.scroll-anim.zoom.visible {
+  transform: scale(1);
+}

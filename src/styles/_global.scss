@@ -1,15 +1,3 @@
-:root {
-  --color-high: #25282B;
-  --color-md: #828282;
-  --color-low: #9A9FA8;
-  --color-line: #25282B;
-  --color-yellow: #FDC435;
-  --color-gray: #F9FAFF;
-  --color-white: #FFFFFF;
-
-  --font-1: 'Roboto';
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +5,7 @@
 
 body {
   max-width: 100%;
+  font-family: var(--font-1);
 }
 
  /* Global Styles  */
@@ -26,6 +15,7 @@ button, a {
   outline: none;
   background-color: transparent;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .primary, .secondary {
@@ -43,6 +33,12 @@ button, a {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px 0 rgba($color: #000000, $alpha: 0.3);
   }
+}
+
+.flex-justify {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 a {
@@ -68,5 +64,5 @@ img {
 }
 
 .nunito {
-  font-family: 'Nunito';
+  font-family: var(--font-2);
 }

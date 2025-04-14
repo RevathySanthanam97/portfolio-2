@@ -1,46 +1,151 @@
 .intro {
-  @media screen and (min-width: 992px) {
-    display: flex;
-    .left, .right {
-      width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0 20px;
+
+  @media screen and (min-width: $ls) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  @media screen and (min-width: $xl) {
+    // max-width: var(--max-width);
+  }
+
+  .right {
+    text-align: center;
+    @media screen and (min-width: $ls) {
+      position: relative;
+      width: 560px;
+      height: 445px;
+    }    
+
+    svg {
+      --color-path: transparent;
+      --color-mask: var(--color-yellow);
+
+      width: 100%;
+      height: 100%;
+
+      #mask_img {
+        mask: unset;
+      }
+
+      @media screen and (min-width: $md) {
+        max-height: 400px;
+        width: auto;
+      }
+
+      @media screen and (min-width: $ls) {
+        max-height: unset;
+        --color-path: var(--color-yellow);
+
+        width: 630px;
+        position: absolute;
+        height: 560px;
+        right: 0;
+        // right: -20px;
+        top: -110px;
+
+        #mask_img {
+          mask: url(#mask_img);
+        }
+      }
     }
   }
 
   .left {
-    .left-content {
-      small {
-        margin-bottom: 5px;
-      }
+    h1 {
+      font-size: 32px;
+      margin: 5px 0 16px;
+      line-height: 1.3;
+    }
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+      color: var(--color-md);
+    }
+    .btn-list {
+      display: flex;
+      gap: 12px;
+    }
+    @media screen and (min-width: $ls) {
+      padding: 0 var(--padding);
+      flex: 1;
+      max-width: 520px;
+      z-index: 1;
+      position: relative;
 
       h1 {
-        font-size: 32px;
-        @media screen and (min-width: 992px) {
-          font-size: 64px;
-        }
+        font-size: 64px;
+        margin-bottom: 32px;
       }
-
-      >p {
-        margin: 15px 0;
+      p {
+        margin-bottom: 32px;
+        font-size: 24px;
         color: var(--color-md);
-        font-size: 18px;
-        @media screen and (min-width: 992px) {
-          font-size: 24px;
-        }
       }
+    }
+    @media screen and (min-width: $xl) {
+      margin-left: calc((100vw - var(--max-width))/2);
+    }
+  }
 
-      .btn-list {
-        display: flex;
-        gap: 20px;
-      }
-    }
-  }
-  .right {
-    flex: 1;
-    img {
-      margin-left: auto;
-      margin-top: -86px;
-      z-index: -1;
-      position: relative;
-    }
-  }
+  // @media screen and (min-width: $md) {
+  //   min-height: 629px;
+  //   flex-direction: row;
+  //   >div {
+  //     flex: 1;
+  //   }
+  // }
+
+  // .left {
+  //   padding: 20px;
+  //   z-index: 1;
+  //   @media screen and (min-width: $md) {
+  //     margin-left: calc((100vw - var(--max-width))/2);
+  //     max-width: 486px;
+  //   }
+
+  //   .left-content {
+  //     small {
+  //       margin-bottom: 5px;
+  //     }
+
+  //     h1 {
+  //       font-size: 32px;
+  //       @media screen and (min-width: $md) {
+  //         font-size: 64px;
+  //       }
+  //     }
+
+  //     >p {
+  //       margin: 15px 0;
+  //       color: var(--color-md);
+  //       font-size: 18px;
+  //       @media screen and (min-width: $md) {
+  //         font-size: 24px;
+  //       }
+  //     }
+
+  //     .btn-list {
+  //       display: flex;
+  //       gap: 20px;
+  //     }
+  //   }
+  // }
+
+  // .right {
+  //   @media screen and (min-width: $md) {
+  //     max-width: 720px;
+  //     min-height: 629px;
+  //     flex: 1;
+  //     img {
+  //       position: absolute;
+  //       top: -102px;
+  //       right: 0;
+  //     }
+  //   }
+  // }
 }

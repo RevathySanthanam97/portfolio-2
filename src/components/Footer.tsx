@@ -1,24 +1,23 @@
-import Insta from "../assets/insta.svg";
-import Gmail from "../assets/mail.svg";
-import LinkedIn from "../assets/linkedin.svg";
 import "./Footer.scss";
 import Title from "./Title";
+import Social from "./Social";
+import ScrollAnimation from "./ScrollAnimation";
+import FooterSVG from "../assets/footer.svg?react";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className='container-content'>
-        <Title>Contact Me</Title>
-        <ul className="social-media">
-          <li><a href="https://www.instagram.com/amitaredolent7/"><img src={Insta} /></a></li>
-          <li><a href="mailto:revathysanthanam1997@gmail.com"><img src={Gmail} /></a></li>
-          <li><a href="https://www.linkedin.com/in/revathy-santhanam-70870a165/"><img src={LinkedIn} /></a></li>
-        </ul>
-        <p className="nunito">
-          Revathy Santhanam, Since 2019
-        </p>
-      </div>
-    </footer>
+    <ScrollAnimation animation="slide-up" duration={400} delay={100}>
+      <footer>
+        <FooterSVG />
+        <div className="container">
+          <Title>Contact</Title>
+          <Social />
+          <p className="nunito">
+            Revathy Santhanam, Since 2019
+          </p>
+        </div>
+      </footer>
+    </ScrollAnimation>
   )
 }
 

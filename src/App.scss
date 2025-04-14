@@ -4,12 +4,7 @@ header {
   justify-content: space-between;
   padding-top: 12px;
   padding-bottom: 12px;
-}
-
-main {
-  max-width: 1280px;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  max-height: 102px;
 }
 
 footer {
@@ -17,11 +12,7 @@ footer {
 }
 
 .container  {
-  max-width: 1280px;
+  max-width: var(--max-width);
   margin: auto;
-  padding: 20px;
-}
-
-.container-content {
-  padding: 0 40px;
+  padding: var(--padding);
 }
