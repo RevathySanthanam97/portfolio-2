@@ -1,20 +1,29 @@
 footer {
-	min-height: 350px;
 	position: relative;
 	width: 100vw;
 	overflow: hidden;
+	@media screen and (min-width: $md) {
+		min-height: 350px;
+	}
 
 	>svg {
 		position: absolute;
 		left: 0;
-		bottom: -40px;
+		bottom: 0px;
 		width: 100%;
 		height: auto;
+	  @media screen and (min-width: $md) {
+			bottom: -40px;
+		}
 	}
 
-	>div {
+	>div.container {
 		z-index: 5;
 		position: relative;
+		margin-bottom: 60px;
+	  @media screen and (min-width: $md) {
+			margin-bottom: 0;
+		}
 	}
 
 	p {

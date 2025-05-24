@@ -4,7 +4,7 @@ import "./scrollAnimation.scss";
 
 type Props = {
   children: React.ReactNode;
-  animation?: "fade" | "slide-up" | "slide-left" | "zoom";
+  animation?: "fade" | "slide-up" | "slide-left" | "zoom" | "slide-right";
   duration?: number; // in ms
   delay?: number;    // in ms
   once?: boolean;

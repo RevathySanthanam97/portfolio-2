@@ -38,6 +38,15 @@
   transform: translateX(0);
 }
 
+/* Slide right */
+.scroll-anim.slide-right {
+  transform: translateX(-20px);
+}
+
+.scroll-anim.slide-right.visible {
+  transform: translateX(0);
+}
+
 /* Zoom */
 .scroll-anim.zoom {
   transform: scale(1.05);

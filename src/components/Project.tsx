@@ -1,7 +1,5 @@
 import Title from "../components/Title"
-import Tero from "../assets/teroshop.jpg"
 import "./Project.scss"
-import { Link } from "react-router-dom"
 import { Root, List, Trigger, Content } from "@radix-ui/react-tabs"
 import Globus from "../assets/globus.svg?react";
 import TL from "../assets/tl.svg?react";
@@ -13,7 +11,7 @@ import Rafland from "../assets/rafland.svg?react";
 import Bestseller from "../assets/bestseller.svg?react";
 import A4 from "../assets/a4.svg?react";
 import Arrow from "../assets/arrow.svg?react";
-import Byggtogbuid from "../assets/bg.png";
+import Byggtogbuid from "../assets/byggtogbuid.svg?react";
 import ScrollAnimation from "./ScrollAnimation"
 
 const Projects = () => {
@@ -30,60 +28,73 @@ const Projects = () => {
 					</Trigger>
 				</List>
 				<Content className="TabsContent" value="tab1">
+					<div>
+						<p>I built a scalable and flexible eCommerce framework using Next.js and Magento, helping launch <span className="color">10+ projects within tight 4-week sprints</span>. To give clients full control over their content, I created a custom setup using DatoCMS and GraphQL, allowing them to build and update complex pages without needing developer support. I integrated Algolia Instant Search for lightning-fast product discovery and Klaviyo for personalized email flows like abandoned cart reminders and product view notifications. For marketing insights, I set up tracking with Google Analytics, Meta Analytics, and Google Tag Manager. I also introduced a Gift Registry feature backed by DynamoDB, which added a fun and useful experience for end users.</p>
+						<br/>
+							<p><b>Tech Stack:</b> Frontend: HTML, CSS, SASS, Styled Components, Next JS</p>
+						<br/>
+							<p><b>Backend:</b> NodeJS, Magento, Apollo Graphql</p>
+						{/* <img src="" /> */}
+					</div>
 					<div className="project-list">
-						<p>
-						I built a scalable and flexible eCommerce framework using Next.js and Magento, helping launch <span className="color">10+ projects within tight 4-week sprints</span>. To give clients full control over their content, I created a custom setup using DatoCMS and GraphQL, allowing them to build and update complex pages without needing developer support. I integrated Algolia Instant Search for lightning-fast product discovery and Klaviyo for personalized email flows like abandoned cart reminders and product view notifications. For marketing insights, I set up tracking with Google Analytics, Meta Analytics, and Google Tag Manager. I also introduced a Gift Registry feature backed by DynamoDB, which added a fun and useful experience for end users.
-						<p><b>Tech Stack:</b> Frontend: HTML, CSS, SASS, Styled Components, Next JS</p>
-						<p><b>Backend:</b> NodeJS, Magento, Apollo Graphql</p>
-						</p>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://www.globus.is" target="_blank" className="project-item" style={{ backgroundColor: "#7A1632" }}>
 								<Globus />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://www.a4.is" target="_blank" className="project-item" style={{ backgroundColor: "#FF3500" }}>
 								<A4 />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
-							<a href="https://www.bestseller.is" target="_blank" className="project-item" style={{ backgroundColor: "#fff" }}>
+							<a href="https://www.bestseller.is" target="_blank" className="project-item" style={{ backgroundColor: "#111" }}>
 								<Bestseller />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://www.ibudin.is" target="_blank" className="project-item" style={{ backgroundColor: "#C81A46" }}>
 								<Ibudin />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://www.ht.is" target="_blank" className="project-item" style={{ backgroundColor: "#ed1c24" }}>
 								<HT />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://www.asbjorn.is" target="_blank" className="project-item" style={{ backgroundColor: "#1820EF" }}>
 								<Asbjorn />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://www.kunigund.is" target="_blank" className="project-item" style={{ backgroundColor: "#811419" }}>
 								<Kunigund />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
-							<a href="https://www.byggtogbuid.is" target="_blank" className="project-item" style={{ backgroundColor: "#fff" }}>
-								<img src={Byggtogbuid} />
+							<a href="https://www.byggtogbuid.is" target="_blank" className="project-item" style={{ backgroundColor: "#111" }}>
+								<Byggtogbuid />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://www.rafland.is" target="_blank" className="project-item" style={{ backgroundColor: "#01AEB3" }}>
 								<Rafland />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://www.tl.is" target="_blank" className="project-item" style={{ backgroundColor: "#166CC8" }}>
 								<TL />
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 					</div>
@@ -91,33 +102,31 @@ const Projects = () => {
 				<Content className="TabsContent" value="tab2">
 					<div className="project-list teroshop">
 						<p>Built an eCommerce framework that fetches MBC data via webhooks, processes it into DynamoDB, and serves it via GraphQL. Designed a frontend with Atomic Design, usable as a full storefront or headless. Published shared components to AWS CodeArtifact.
-							<p>
+							<br/>
 								<b>Frontend:</b> HTML, CSS, SASS, React Typescript, Vite, React Router Dom, Radix UI
-							</p>
-							<p>
+							<br/>
 								<b>Backend:</b> Python, DynamoDB, Business Central, Rest API, Apollo Graphql
-							</p>
 						</p>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://dev.clink.is/theme-preview?templateCode=default" target="_blank" className="project-item">
-								<span>Payment App <Arrow /></span>
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://primitives-preview.labs.roanuz.com/" target="_blank" className="project-item">
-								<span>UI Primitives <Arrow /></span>
+								<span>Open Link <Arrow /></span>
 
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://ts-primitives.tero.roanuz.com/" target="_blank" className="project-item">
-								<span>Ecommerce UI <Arrow /></span>
+								<span>Open Link <Arrow /></span>
 
 							</a>
 						</ScrollAnimation>
 						<ScrollAnimation animation="slide-up" once={false} duration={500} delay={150}>
 							<a href="https://ts-demo.tero.roanuz.com/product/e4bee85b-8586-ef11-ac23-000d3adddf54" target="_blank" className="project-item">
-								<span>Boilerplate <Arrow /></span>
+								<span>Open Link <Arrow /></span>
 							</a>
 						</ScrollAnimation>
 					</div>
